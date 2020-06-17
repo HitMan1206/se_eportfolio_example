@@ -22,8 +22,10 @@ class HomeScreen extends StatelessWidget implements Screen{
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               CustomText("Willkommen zur Test App", fontSize: 25),
+              CustomText("Wähle eine Kategorie", fontSize: 20),
+              SizedBox(height: 10,),
               CustomButton("Year", () {Navigator.pushNamed(ctx, "yearfact");}),
-              CustomButton("Math", () {Navigator.pushNamed(ctx, "mathfact");}),
+              CustomButton("Math", () {Navigator.pushNamed(ctx, "numberfact");}),
               CustomButton("Date", () {Navigator.pushNamed(ctx, "datefact");}),
             ],
           )

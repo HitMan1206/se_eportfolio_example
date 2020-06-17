@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         'datefact': (context) {
           return getScaffold(DateFactScreen(), context);
         },
-        'mathfact': (context) {
+        'numberfact': (context) {
           return getScaffold(NumberFactScreen(), context);
         },
         'yearfact': (context) {
