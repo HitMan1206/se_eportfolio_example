@@ -1,16 +1,17 @@
 # se_eportfolio_example
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Install Flutter SDK -> https://flutter.dev/docs/get-started/install
+2. Install Android Studio -> https://developer.android.com/studio
+3. Get Emulator to test
+    * Open Android Studio
+    * Click Conigure -> AVD Manager
+    * Create Virtual Device
+    * Start the virtual Device
+4. Clone the Project
+5. Open it in IntelliJ
+6. Choose in the Project Settings the Flutter SDK as Project SDK
+7. run "flutter pub get"
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+=> If you need more help check https://flutter.dev/docs
