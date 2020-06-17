@@ -15,3 +15,8 @@
 7. run "flutter pub get"
 
 => If you need more help check https://flutter.dev/docs
+
+## Task
+If everything works try to write Tests for the Classes and Widgets.
+
+An example of possible Tests you can find here -> TODO
