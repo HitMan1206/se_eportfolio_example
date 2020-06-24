@@ -1,6 +1,6 @@
 # se_eportfolio_example
 
-Presentation -> TODO
+Presentation -> https://docs.google.com/presentation/d/1NSChNk9U-jlXmy8kX_YXdruvk_ows28M6_WBpuRRKB0/edit?usp=sharing
 
 ## Getting Started
 
