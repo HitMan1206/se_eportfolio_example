@@ -21,4 +21,4 @@ Presentation -> TODO
 ## Task
 If everything works try to write Tests for the Classes and Widgets.
 
-An example of possible Tests you can find here -> TODO
+An example of possible Tests you can find here -> https://github.com/HitMan1206/se_eportfolio_example
