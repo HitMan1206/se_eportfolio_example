@@ -9,6 +9,7 @@ import 'package:se_eportfolio_example/components/CustomButton.dart';
 import 'package:se_eportfolio_example/components/BorderContainer.dart';
 import 'package:se_eportfolio_example/components/CustomSnapshotError.dart';
 import 'package:se_eportfolio_example/components/CustomText.dart';
+import 'package:se_eportfolio_example/components/HomeButton.dart';
 import 'package:se_eportfolio_example/screens/screen.dart';
 
 class YearFactScreen extends StatefulWidget implements Screen {
@@ -47,15 +48,16 @@ class YearFactState extends State<YearFactScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(height: 10,),
-                  CustomText("Year: $year", fontSize: 30,),
+                  CustomText("Year: $year",keyName: "YearFactDescription", fontSize: 30,),
                   Padding(padding: EdgeInsets.all(10),
-                    child: BorderContainer(snapshot.data.text),),
+                    child: BorderContainer(snapshot.data.text, keyName: "YearFactData",),),
                   CustomButton("New Fact", () {
                     setState(() {
                       year = Random().nextInt(maxYear);
                       yearfactdata = API.getYearFact(year);
                     });
-                  })
+                  }, keyName: "NewYearFactButton",),
+                  HomeButton(ctx, keyName: "YearFactHomeButton")
                 ],
               );
             } else if (snapshot.hasError) {

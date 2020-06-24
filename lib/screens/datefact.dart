@@ -9,6 +9,7 @@ import 'package:se_eportfolio_example/components/CustomButton.dart';
 import 'package:se_eportfolio_example/components/BorderContainer.dart';
 import 'package:se_eportfolio_example/components/CustomSnapshotError.dart';
 import 'package:se_eportfolio_example/components/CustomText.dart';
+import 'package:se_eportfolio_example/components/HomeButton.dart';
 import 'package:se_eportfolio_example/screens/screen.dart';
 
 class DateFactScreen extends StatefulWidget implements Screen {
@@ -48,15 +49,16 @@ class DateFactScreen extends StatefulWidget implements Screen {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                   SizedBox(height: 10,),
-                  CustomText("Date: $day.$month.${snapshot.data.year}", fontSize: 30,),
-                Padding(padding: EdgeInsets.all(10), child: BorderContainer(snapshot.data.text),),
+                  CustomText("Date: $day.$month.${snapshot.data.year}", keyName: "DateFactDescription", fontSize: 30,),
+                Padding(padding: EdgeInsets.all(10), child: BorderContainer(snapshot.data.text, keyName: "DateFactData",),),
                 CustomButton("New Fact", (){
                   setState(() {
                     month = getRandomMonth();
                     day = getRandomDay(month);
                     datefactdata = API.getDateFact(month, day);
                   });
-                })
+                }, keyName: "NewDateFactButton",),
+                HomeButton(ctx, keyName: "DateFactHomeButton")
               ],
             );
           }else if (snapshot.hasError) {

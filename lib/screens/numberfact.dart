@@ -9,6 +9,7 @@ import 'package:se_eportfolio_example/components/CustomButton.dart';
 import 'package:se_eportfolio_example/components/BorderContainer.dart';
 import 'package:se_eportfolio_example/components/CustomSnapshotError.dart';
 import 'package:se_eportfolio_example/components/CustomText.dart';
+import 'package:se_eportfolio_example/components/HomeButton.dart';
 import 'package:se_eportfolio_example/screens/screen.dart';
 
 class NumberFactScreen extends StatefulWidget implements Screen {
@@ -48,15 +49,16 @@ class NumberFactState extends State<NumberFactScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(height: 10,),
-                  CustomText("Number: $number", fontSize: 30,),
+                  CustomText("Number: $number", keyName: "NumberFactDescription", fontSize: 30,),
                   Padding(padding: EdgeInsets.all(10),
-                    child: BorderContainer(snapshot.data.text),),
+                    child: BorderContainer(snapshot.data.text, keyName: "NumberFactData",),),
                   CustomButton("New Fact", () {
                     setState(() {
                       number = Random().nextInt(maxNumber);
                       numberfactdata = API.getNumberFact(number);
                     });
-                  })
+                  }, keyName: "NewNumberFactButton",),
+                  HomeButton(ctx, keyName: "NumberFactHomeButton")
                 ],
               );
             } else if (snapshot.hasError) {
