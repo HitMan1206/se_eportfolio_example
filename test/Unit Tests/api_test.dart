@@ -22,6 +22,13 @@ void main(){
       expect(result.number, 1729);
       expect(result.type, "math");
     });
+
+    test("get year", () async {
+      var result = await API.getYearFact(2020);
+
+      expect(result, isNotNull);
+      expect(result.type, "year");
+    });
   });
 
 
