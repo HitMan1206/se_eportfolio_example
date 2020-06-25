@@ -1,6 +1,7 @@
 # se_eportfolio_example
 
 Presentation -> https://docs.google.com/presentation/d/1NSChNk9U-jlXmy8kX_YXdruvk_ows28M6_WBpuRRKB0/edit?usp=sharing
+Used API for sample App -> https://rapidapi.com/divad12/api/numbers-1
 
 ## Getting Started
 
@@ -23,5 +24,71 @@ If everything works try to write Tests for the Classes and Widgets.
 
 An example of possible Tests you can find here -> https://github.com/HitMan1206/se_eportfolio_example
 
-## Information to the Sample App
-Used API -> https://rapidapi.com/divad12/api/numbers-1 
+## Tutorial for Demo Tests
+1. Add the following dependencies to your ``` pubspec.yaml ```
+
+   ![Test Dependencies](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/TestDependencies.PNG)
+
+2. Run ``` flutter pub get ```
+3. Start writing Tests
+
+## Unit Test
+* All tests have to be in the test folder
+* All tests have to end with ``` _test.dart ```
+* All test files need a main function
+* Compare values with the expect function
+   
+   ![Simple Unit Test](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/SimpleUnitTest.PNG)
+
+* Execute tests from your flutter root with the command ``` flutter test ```
+
+## Widget Test
+* All tests have to be in the test folder
+* All tests have to end with ``` _test.dart ```
+* All test files need a main function
+* Compare number of found widgets with the expect function
+* Find widgets with a Finder (e.g. ``` find.text("text of the searched widget") ```)
+   
+   ![Simple Widget Test](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/WidgetTestExample.PNG)
+
+* Execute tests from your flutter root with the command ``` flutter test ```
+
+## Integration Test
+* All tests have to be in the Test_driver folder
+* Execute tests from your flutter root with the command ``` flutter drive --target=test_driver/app.dart ```
+* Executing only works with a running system (e.g. an emulator)
+* Each test needs two files
+
+   1. Executable File (named like you want, e.g. ``` app.dart ```)
+      
+      --> Contains everything to execute the test. It sets up the test and runs the app. Minimal file is as follows
+      
+      
+      ![Integration Test Executable](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/IntegrationTestExecutableFile.PNG)
+
+   2. Test File (namend <executable>_test.dart, e.g. ``` app_test.dart ```)
+      
+      --> Contains the tests you want to execute on your app. Structure is similar to an unit test.
+   
+      
+      ![Integration Test](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/WidgetTestExample.PNG)
+   
+### Finding a Widget
+
+* Give your Widget a key
+   
+   ![Give a Key](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/WidgetKey.PNG)
+
+* Use method ``` byValueKey ``` to find it
+   
+   ![Find Widget by Key](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/FindWidgetByKey.PNG)
+
+
+### Interacting with a Widget
+
+* Tap it: ``` driver.tap(widget) ```
+* Get text:  ``` driver.getText() ``` 
+* Write to a currently focused text field: ``` driver.enterText("text to enter") ```
+* Move a Widget: ``` driver.drag(widget, offset) ```
+   
+   ![Interacting with a Widget](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/IntegrationTestMethods.PNG)
