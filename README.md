@@ -71,12 +71,12 @@ An example of possible Tests you can find here -> https://github.com/HitMan1206/
       
       ![Integration Test Executable](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/IntegrationTestExecutableFile.PNG)
 
-   2. Test File (namend <executable>_test.dart, e.g. ``` app_test.dart ```)
+   2. Test File (named 'executable'_test.dart, e.g. ``` app_test.dart ```)
       
       --> Contains the tests you want to execute on your app. Structure is similar to an unit test.
    
       
-      ![Integration Test](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/WidgetTestExample.PNG)
+      ![Integration Test](https://github.com/HitMan1206/se_eportfolio_example/blob/master/presentationImages/IntegrationTestMethods.PNG)
    
 ### Finding a Widget
 
